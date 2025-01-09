@@ -20,7 +20,7 @@ To run this project, you will need Python 3.7 or higher.
 
 Install Dependencies
 You can install the required dependencies using pip:
-``pip install autogen aiohttp duckduckgo-search``
+`pip install autogen aiohttp duckduckgo-search`
 
 The assistant will fetch search results based on your query, integrate them into its response, and present a comprehensive and well-structured answer.
 
