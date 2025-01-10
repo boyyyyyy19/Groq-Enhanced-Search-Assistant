@@ -95,15 +95,7 @@ class WebSearchManager:
             await asyncio.sleep(self.config.rate_limit_delay - time_since_last)
             
         try:
-            # Initialize search session
-            async with aiohttp.ClientSession() as session:
-                async with session.get(
-                    "https://duckduckgo.com/",
-                    headers={"User-Agent": "Mozilla/5.0"}
-                ) as response:
-                    await asyncio.sleep(1)  # Respect rate limits
-                    
-            # Perform search
+            # Perform search using DDGS
             with DDGS() as ddgs:
                 results = list(ddgs.text(
                     query,
@@ -239,3 +231,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
